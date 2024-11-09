@@ -6,7 +6,7 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 08:45:57 by ebroudic          #+#    #+#             */
-/*   Updated: 2024/10/25 09:40:32 by ebroudic         ###   ########.fr       */
+/*   Updated: 2024/10/25 08:40:30 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,12 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	new = NULL;
 	while (lst)
 	{
-		test = ft_lstnew(NULL);
+		test = ft_lstnew(f(lst->content));
 		if (!test)
 		{
-			ft_lstclear(&new, del);
+			ft_lstclear(&test, (*del));
 			return (NULL);
 		}
-		test->content = f(lst->content);
 		ft_lstadd_back(&new, test);
 		lst = lst->next;
 	}
