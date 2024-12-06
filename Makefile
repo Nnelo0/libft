@@ -39,15 +39,6 @@ SRCS = \
 	libft/ft_substr.c \
 	libft/ft_tolower.c \
 	libft/ft_toupper.c \
-	printf/ft_printf.c \
-	printf/printf_char.c \
-	printf/printf_digit.c \
-	printf/printf_hex.c \
-	printf/printf_ptr.c \
-	printf/printf_string.c \
-	printf/printf_udigit.c \
-	gnl/get_next_line.c \
-	gnl/get_next_line_utils.c \
 	libft/ft_lstnew_bonus.c \
 	libft/ft_lstadd_front_bonus.c \
 	libft/ft_lstsize_bonus.c \
